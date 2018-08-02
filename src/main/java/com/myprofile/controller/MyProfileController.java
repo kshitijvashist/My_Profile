@@ -17,7 +17,7 @@ public class MyProfileController {
 	@RequestMapping("/Kshitij")
 	public String getData()
 	{
-		System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiirrrrrrrriiiiii");
+		
 		return "index";
 	}
 	
@@ -26,8 +26,7 @@ public class MyProfileController {
 	EmailService service;
 	@PostMapping("/email")
     public String greetingSubmit(@ModelAttribute EmailSender email) {
-		System.out.println("hiiiiiiiiiiiiiiiiiiiiii"+email.getEmail());
-       
+		
 		service.sendSimpleMessage(email.getEmail(),email.getFullName(),email.getMessage());
 		
 		
