@@ -1,0 +1,4 @@
+FROM java:8
+EXPOSE 8080
+ADD /target/MyProfile.jar MyProfile.jar
+ENTRYPOINT ["java","-jar","MyProfile.jar"]
